@@ -1,0 +1,45 @@
+Machine name: a*b*c* Nondeterministic
+Initial string: aaabbbc
+Depth of tree: 9
+Total transitions: 36
+Average nondeterminism: 4.11
+[["","q0","aaabbbc"]]
+[["a","q0","aabbbc"],["a","q1","aabbbc"],["a","q2","aabbbc"],["a","q3","aabbbc"]]
+[["aa","q0","abbbc"],["aa","q1","abbbc"],["aa","q2","abbbc"],["aa","q3","abbbc"]]
+[["aaa","q0","bbbc"],["aaa","q1","bbbc"],["aaa","q2","bbbc"],["aaa","q3","bbbc"]]
+[["aaab","q1","bbc"],["aaab","q2","bbc"],["aaab","q3","bbc"],["aaab","q1","bbc"],["aaab","q2","bbc"],["aaab","q3","bbc"]]
+[["aaabb","q1","bc"],["aaabb","q2","bc"],["aaabb","q3","bc"],["aaabb","q1","bc"],["aaabb","q2","bc"],["aaabb","q3","bc"]]
+[["aaabbb","q1","c"],["aaabbb","q2","c"],["aaabbb","q3","c"],["aaabbb","q1","c"],["aaabbb","q2","c"],["aaabbb","q3","c"]]
+[["aaabbbc","q2",""],["aaabbbc","q3",""],["aaabbbc","q2",""],["aaabbbc","q3",""]]
+[["aaabbbc_","qacc",""],["aaabbbc_","qacc",""]]
+[]
+String accepted in 9 transitions
+
+Machine name: a*b*c* Nondeterministic
+Initial string: aaacc
+Depth of tree: 7
+Total transitions: 22
+Average nondeterminism: 3.29
+[["","q0","aaacc"]]
+[["a","q0","aacc"],["a","q1","aacc"],["a","q2","aacc"],["a","q3","aacc"]]
+[["aa","q0","acc"],["aa","q1","acc"],["aa","q2","acc"],["aa","q3","acc"]]
+[["aaa","q0","cc"],["aaa","q1","cc"],["aaa","q2","cc"],["aaa","q3","cc"]]
+[["aaac","q2","c"],["aaac","q3","c"],["aaac","q2","c"],["aaac","q3","c"]]
+[["aaacc","q2",""],["aaacc","q3",""],["aaacc","q2",""],["aaacc","q3",""]]
+[["aaacc_","qacc",""],["aaacc_","qacc",""]]
+[]
+String accepted in 7 transitions
+
+Machine name: a*b*c* Nondeterministic
+Initial string: aaaccbb
+Depth of tree: 6
+Total transitions: 21
+Average nondeterminism: 3.50
+[["","q0","aaaccbb"]]
+[["a","q0","aaccbb"],["a","q1","aaccbb"],["a","q2","aaccbb"],["a","q3","aaccbb"]]
+[["aa","q0","accbb"],["aa","q1","accbb"],["aa","q2","accbb"],["aa","q3","accbb"]]
+[["aaa","q0","ccbb"],["aaa","q1","ccbb"],["aaa","q2","ccbb"],["aaa","q3","ccbb"]]
+[["aaac","q2","cbb"],["aaac","q3","cbb"],["aaac","q2","cbb"],["aaac","q3","cbb"]]
+[["aaacc","q2","bb"],["aaacc","q3","bb"],["aaacc","q2","bb"],["aaacc","q3","bb"]]
+[]
+String rejected in 6 transitions
