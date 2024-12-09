@@ -43,3 +43,30 @@ Average nondeterminism: 3.50
 [["aaacc","q2","bb"],["aaacc","q3","bb"],["aaacc","q2","bb"],["aaacc","q3","bb"]]
 []
 String rejected in 6 transitions
+
+Machine name: a*b*c* Nondeterministic
+Initial string: aaaaabbbbbbbccccc
+Depth of tree: 19
+Total transitions: 84
+Average nondeterminism: 4.47
+[["","q0","aaaaabbbbbbbccccc"]]
+[["a","q0","aaaabbbbbbbccccc"],["a","q1","aaaabbbbbbbccccc"],["a","q2","aaaabbbbbbbccccc"],["a","q3","aaaabbbbbbbccccc"]]
+[["aa","q0","aaabbbbbbbccccc"],["aa","q1","aaabbbbbbbccccc"],["aa","q2","aaabbbbbbbccccc"],["aa","q3","aaabbbbbbbccccc"]]
+[["aaa","q0","aabbbbbbbccccc"],["aaa","q1","aabbbbbbbccccc"],["aaa","q2","aabbbbbbbccccc"],["aaa","q3","aabbbbbbbccccc"]]
+[["aaaa","q0","abbbbbbbccccc"],["aaaa","q1","abbbbbbbccccc"],["aaaa","q2","abbbbbbbccccc"],["aaaa","q3","abbbbbbbccccc"]]
+[["aaaaa","q0","bbbbbbbccccc"],["aaaaa","q1","bbbbbbbccccc"],["aaaaa","q2","bbbbbbbccccc"],["aaaaa","q3","bbbbbbbccccc"]]
+[["aaaaab","q1","bbbbbbccccc"],["aaaaab","q2","bbbbbbccccc"],["aaaaab","q3","bbbbbbccccc"],["aaaaab","q1","bbbbbbccccc"],["aaaaab","q2","bbbbbbccccc"],["aaaaab","q3","bbbbbbccccc"]]
+[["aaaaabb","q1","bbbbbccccc"],["aaaaabb","q2","bbbbbccccc"],["aaaaabb","q3","bbbbbccccc"],["aaaaabb","q1","bbbbbccccc"],["aaaaabb","q2","bbbbbccccc"],["aaaaabb","q3","bbbbbccccc"]]
+[["aaaaabbb","q1","bbbbccccc"],["aaaaabbb","q2","bbbbccccc"],["aaaaabbb","q3","bbbbccccc"],["aaaaabbb","q1","bbbbccccc"],["aaaaabbb","q2","bbbbccccc"],["aaaaabbb","q3","bbbbccccc"]]
+[["aaaaabbbb","q1","bbbccccc"],["aaaaabbbb","q2","bbbccccc"],["aaaaabbbb","q3","bbbccccc"],["aaaaabbbb","q1","bbbccccc"],["aaaaabbbb","q2","bbbccccc"],["aaaaabbbb","q3","bbbccccc"]]
+[["aaaaabbbbb","q1","bbccccc"],["aaaaabbbbb","q2","bbccccc"],["aaaaabbbbb","q3","bbccccc"],["aaaaabbbbb","q1","bbccccc"],["aaaaabbbbb","q2","bbccccc"],["aaaaabbbbb","q3","bbccccc"]]
+[["aaaaabbbbbb","q1","bccccc"],["aaaaabbbbbb","q2","bccccc"],["aaaaabbbbbb","q3","bccccc"],["aaaaabbbbbb","q1","bccccc"],["aaaaabbbbbb","q2","bccccc"],["aaaaabbbbbb","q3","bccccc"]]
+[["aaaaabbbbbbb","q1","ccccc"],["aaaaabbbbbbb","q2","ccccc"],["aaaaabbbbbbb","q3","ccccc"],["aaaaabbbbbbb","q1","ccccc"],["aaaaabbbbbbb","q2","ccccc"],["aaaaabbbbbbb","q3","ccccc"]]
+[["aaaaabbbbbbbc","q2","cccc"],["aaaaabbbbbbbc","q3","cccc"],["aaaaabbbbbbbc","q2","cccc"],["aaaaabbbbbbbc","q3","cccc"]]
+[["aaaaabbbbbbbcc","q2","ccc"],["aaaaabbbbbbbcc","q3","ccc"],["aaaaabbbbbbbcc","q2","ccc"],["aaaaabbbbbbbcc","q3","ccc"]]
+[["aaaaabbbbbbbccc","q2","cc"],["aaaaabbbbbbbccc","q3","cc"],["aaaaabbbbbbbccc","q2","cc"],["aaaaabbbbbbbccc","q3","cc"]]
+[["aaaaabbbbbbbcccc","q2","c"],["aaaaabbbbbbbcccc","q3","c"],["aaaaabbbbbbbcccc","q2","c"],["aaaaabbbbbbbcccc","q3","c"]]
+[["aaaaabbbbbbbccccc","q2",""],["aaaaabbbbbbbccccc","q3",""],["aaaaabbbbbbbccccc","q2",""],["aaaaabbbbbbbccccc","q3",""]]
+[["aaaaabbbbbbbccccc_","qacc",""],["aaaaabbbbbbbccccc_","qacc",""]]
+[]
+String accepted in 19 transitions
