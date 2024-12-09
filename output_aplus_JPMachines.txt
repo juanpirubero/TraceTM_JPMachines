@@ -44,3 +44,20 @@ Average nondeterminism: 1.83
 [["aaaaaaaaa","q3","a_"]]
 []
 String accepted in 12 transitions
+
+Machine name: a plus
+Initial string: aaaaaaaabbaaaaaaaaaa
+Depth of tree: 9
+Total transitions: 17
+Average nondeterminism: 1.89
+[["","q1","aaaaaaaabbaaaaaaaaaa"]]
+[["a","q1","aaaaaaabbaaaaaaaaaa"],["a","q2","aaaaaaabbaaaaaaaaaa"]]
+[["aa","q1","aaaaaabbaaaaaaaaaa"],["aa","q2","aaaaaabbaaaaaaaaaa"]]
+[["aaa","q1","aaaaabbaaaaaaaaaa"],["aaa","q2","aaaaabbaaaaaaaaaa"]]
+[["aaaa","q1","aaaabbaaaaaaaaaa"],["aaaa","q2","aaaabbaaaaaaaaaa"]]
+[["aaaaa","q1","aaabbaaaaaaaaaa"],["aaaaa","q2","aaabbaaaaaaaaaa"]]
+[["aaaaaa","q1","aabbaaaaaaaaaa"],["aaaaaa","q2","aabbaaaaaaaaaa"]]
+[["aaaaaaa","q1","abbaaaaaaaaaa"],["aaaaaaa","q2","abbaaaaaaaaaa"]]
+[["aaaaaaaa","q1","bbaaaaaaaaaa"],["aaaaaaaa","q2","bbaaaaaaaaaa"]]
+[]
+String rejected in 9 transitions
