@@ -1,17 +1,15 @@
 Machine name: a plus
-Initial string: aaaaa
-Depth of tree: 7
-Total transitions: 12
-Average nondeterminism: 1.71
-[["","q1","aaaaa"]]
-[["a","q1","aaaa"],["a","q2","aaaa"]]
-[["aa","q1","aaa"],["aa","q2","aaa"]]
-[["aaa","q1","aa"],["aaa","q2","aa"]]
-[["aaaa","q1","a"],["aaaa","q2","a"]]
-[["aaaaa","q1",""],["aaaaa","q2",""]]
-[["aaaa","q3","a_"]]
+Initial string: aaa
+Depth of tree: 5
+Total transitions: 8
+Average nondeterminism: 1.60
+[["","q1","aaa"]]
+[["a","q1","aa"],["a","q2","aa"]]
+[["aa","q1","a"],["aa","q2","a"]]
+[["aaa","q1",""],["aaa","q2",""]]
+[["aa","q3","a_"]]
 []
-String accepted in 7 transitions
+String accepted in 5 transitions
 
 Machine name: a plus
 Initial string: aaaba
