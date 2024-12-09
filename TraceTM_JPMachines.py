@@ -4,10 +4,9 @@ import sys
 from collections import defaultdict
 
 def load_machine(file_path):
-    # Store all state transitions in a dictionary
+    """Loads the NTM configuration from a CSV file."""
     transitions = defaultdict(list)
 
-    # Open the CSV file
     with open(file_path, 'r') as file:
         reader = csv.reader(file)
         lines = list(reader)
@@ -28,19 +27,19 @@ def load_machine(file_path):
     
     return name, states, input_symbols, tape_symbols, start_state, accept_state, reject_state, transitions
 
-# Function for tracing all the configurations using BFS
 def trace_ntm(name, start_state, accept_state, reject_state, transitions, input_string, max_depth=100):
-    tree = [[("", start_state, input_string)]] 
-    total_transitions = 0
-    # Iterates up to the max depth to explore the configurations level by level
+    """Traces all possible paths of the NTM using BFS and stores configurations in a list of lists."""
+    tree = [[("", start_state, input_string)]]  # Tree of configurations
+    total_transitions = 0  # Total state transitions made
+
     for depth in range(max_depth):
-        current_level = tree[-1] 
-        next_level = []  
+        current_level = tree[-1]  # Get the current level of configurations
+        next_level = []  # Initialize the next level of configurations
 
         for left, state, tape in current_level:
             total_transitions += 1
 
-            # Check accept or reject states
+            # Check for accept or reject states
             if state == accept_state:
                 tree.append(next_level)
                 return "Accepted", depth + 1, total_transitions, tree
@@ -48,13 +47,12 @@ def trace_ntm(name, start_state, accept_state, reject_state, transitions, input_
                 next_level.append((left, state, tape))
                 continue
 
-            
+            # Determine the current symbol under the head
             current_symbol = tape[0] if tape else "_"
 
-            # Process transitions for the configuration
+            # Process transitions for the current configuration
             if (state, current_symbol) in transitions:
                 for next_state, write, move in transitions[(state, current_symbol)]:
-                    # Update head position and tape based on the transition and by writing the new symbol
                     new_tape = write + tape[1:] if tape else write
                     if move == "R":
                         next_left = left + (current_symbol if tape else "_")
@@ -65,27 +63,31 @@ def trace_ntm(name, start_state, accept_state, reject_state, transitions, input_
                         next_tape = (left[-1] if left else "_") + new_tape
                         next_config = (next_left, next_state, next_tape)
                     next_level.append(next_config)
-        # Stop if no more configurations
-        if not next_level:  
+
+        # Stop if no more configurations exist
+        if not next_level:
             tree.append(next_level)
             return "Rejected", depth + 1, total_transitions, tree
 
-        tree.append(next_level)
+        tree.append(next_level)  # Add the next level to the tree
 
     return "Terminated", max_depth, total_transitions, tree
 
-# Run the NTM and output results
 def run(name, start_state, accept_state, reject_state, transitions, input_string, max_depth=100):
-
+    """Runs the NTM and outputs results."""
     result, depth, total_transitions, tree = trace_ntm(name, start_state, accept_state, reject_state, transitions, input_string, max_depth)
     
     output = []
-    # Get the necessary output
     output.append(f"Machine name: {name}")
     output.append(f"Initial string: {input_string}")
     output.append(f"Depth of tree: {depth}")
     output.append(f"Total transitions: {total_transitions}")
     
+    # Calculate average nondeterminism
+    total_configurations = sum(len(level) for level in tree)
+    average_nondeterminism = total_configurations / depth if depth > 0 else 0
+    output.append(f"Average nondeterminism: {average_nondeterminism:.2f}")
+
     # Format the configuration tree
     tree_output = []
     for level in tree:
@@ -103,6 +105,11 @@ def run(name, start_state, accept_state, reject_state, transitions, input_string
     return "\n".join(output)
 
 def main():
+    """Main function to simulate the NTM."""
+    if len(sys.argv) < 3:
+        print("Usage: python ntm_machine.py <ntm_file.csv> <input_string_or_file>")
+        sys.exit(1)
+
     ntm_file = sys.argv[1]
     input_arg = sys.argv[2]
 
