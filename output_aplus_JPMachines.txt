@@ -1,0 +1,46 @@
+Machine name: a plus
+Initial string: aaaaa
+Depth of tree: 7
+Total transitions: 12
+Average nondeterminism: 1.71
+[["","q1","aaaaa"]]
+[["a","q1","aaaa"],["a","q2","aaaa"]]
+[["aa","q1","aaa"],["aa","q2","aaa"]]
+[["aaa","q1","aa"],["aaa","q2","aa"]]
+[["aaaa","q1","a"],["aaaa","q2","a"]]
+[["aaaaa","q1",""],["aaaaa","q2",""]]
+[["aaaa","q3","a_"]]
+[]
+String accepted in 7 transitions
+
+Machine name: a plus
+Initial string: aaaba
+Depth of tree: 4
+Total transitions: 7
+Average nondeterminism: 1.75
+[["","q1","aaaba"]]
+[["a","q1","aaba"],["a","q2","aaba"]]
+[["aa","q1","aba"],["aa","q2","aba"]]
+[["aaa","q1","ba"],["aaa","q2","ba"]]
+[]
+String rejected in 4 transitions
+
+Machine name: a plus
+Initial string: aaaaaaaaaa
+Depth of tree: 12
+Total transitions: 22
+Average nondeterminism: 1.83
+[["","q1","aaaaaaaaaa"]]
+[["a","q1","aaaaaaaaa"],["a","q2","aaaaaaaaa"]]
+[["aa","q1","aaaaaaaa"],["aa","q2","aaaaaaaa"]]
+[["aaa","q1","aaaaaaa"],["aaa","q2","aaaaaaa"]]
+[["aaaa","q1","aaaaaa"],["aaaa","q2","aaaaaa"]]
+[["aaaaa","q1","aaaaa"],["aaaaa","q2","aaaaa"]]
+[["aaaaaa","q1","aaaa"],["aaaaaa","q2","aaaa"]]
+[["aaaaaaa","q1","aaa"],["aaaaaaa","q2","aaa"]]
+[["aaaaaaaa","q1","aa"],["aaaaaaaa","q2","aa"]]
+[["aaaaaaaaa","q1","a"],["aaaaaaaaa","q2","a"]]
+[["aaaaaaaaaa","q1",""],["aaaaaaaaaa","q2",""]]
+[["aaaaaaaaa","q3","a_"]]
+[]
+String accepted in 12 transitions
